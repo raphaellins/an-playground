@@ -28,8 +28,11 @@ jobs:
 
       - name: npm install
         working-directory: ./
-        run: npm install
+        run: npm i --ignore-scripts
 
-      - name: npm eslint
-        working-directory: ./
-        run: npm run eslint
+      - name: Run ESLint
+        uses: ninosaurus/eslint-check@v5
+        with:
+          eslint-config-path: "./.eslintrc.json"
+          custom-directory: "./"
+          repo-token: ${{secrets.GITHUB_TOKEN}}
