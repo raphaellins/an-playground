@@ -1,14 +1,22 @@
-name: eslint
+name: Lint
+
 on: [pull_request]
+
 jobs:
-  build:
+  eslint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: yarn
-    - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - run: npm ci # or yarn install
+      - uses: sibiraj-s/action-eslint@v1
+        with:
+          eslintArgs: '-c ./.eslintrc.js'
+          extensions: 'js, jsx, ts, tsx'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
 # name: eslint runner
