@@ -6,6 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+
+  constructor(){}
+
+
   title = 'an-playground';
   myvariable = 'myvariable'
+
+
+   doSomething = () =>{
+     const generated = 'generated';
+
+
+     console.log(generated)
+    return 1+1;
+  }
 }
