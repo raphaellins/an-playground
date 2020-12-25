@@ -73,7 +73,7 @@ module.exports = {
             }
         ],
         "@typescript-eslint/indent": [
-            "error",
+            "warn",
             2
         ],
         "@typescript-eslint/member-delimiter-style": [
@@ -110,7 +110,7 @@ module.exports = {
             "single"
         ],
         "@typescript-eslint/semi": [
-            "error",
+            "warn",
             "always"
         ],
         "@typescript-eslint/triple-slash-reference": [
@@ -136,7 +136,7 @@ module.exports = {
         "complexity": "error",
         "constructor-super": "error",
         "curly": "error",
-        "eol-last": "error",
+        "eol-last": "warn",
         "eqeqeq": [
             "error",
             "smart"
@@ -182,7 +182,7 @@ module.exports = {
         "no-caller": "error",
         "no-cond-assign": "error",
         "no-console": [
-            "error",
+            "warn",
             {
                 "allow": [
                     "dir",
