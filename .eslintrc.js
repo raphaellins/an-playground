@@ -110,7 +110,7 @@ module.exports = {
             "single"
         ],
         "@typescript-eslint/semi": [
-            "error",
+            "warn",
             "always"
         ],
         "@typescript-eslint/triple-slash-reference": [
@@ -182,7 +182,7 @@ module.exports = {
         "no-caller": "error",
         "no-cond-assign": "error",
         "no-console": [
-            "error",
+            "warn",
             {
                 "allow": [
                     "dir",
