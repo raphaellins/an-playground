@@ -26,6 +26,10 @@ jobs:
         env:
           NPM_READONLY_AUTH_TOKEN: ${{ secrets.NPM_READONLY_AUTH_TOKEN }}
 
-      - name: Run ESLINT
+      - name: npm install
+        working-directory: ./
+        run: npm install
+
+      - name: npm eslint
         working-directory: ./
         run: npm run eslint
